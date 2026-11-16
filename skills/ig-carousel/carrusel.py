@@ -29,7 +29,7 @@ Formato del JSON (ver ejemplos/):
        "precio": "$32.900", "imagen": "fotos/2.jpg"},
       {"tipo": "comparacion", "titulo": "...", "izquierda": {"titulo": "A", "puntos": ["..."]},
        "derecha": {"titulo": "B", "puntos": ["..."]}},
-      {"tipo": "imagen", "imagen": "renders/piscina.jpg", "titulo": "...", "texto": "..."},
+      {"tipo": "imagen", "imagen": "renders/piscina.jpg", "posicion": "30% center", "titulo": "...", "texto": "..."},
       {"tipo": "resumen", "titulo": "...", "puntos": ["...", "..."]},
       {"tipo": "cta", "titulo": "Comenta FORTUNER", "texto": "y te mando toda la info"}
     ]
@@ -376,14 +376,18 @@ async () => {
 """
 
 
-def bg(path, cls="bg"):
-    return f'<div class="{cls}" style="background-image:url(\'{path.as_uri()}\')"></div>' if path else ""
+def bg(path, cls="bg", pos=None):
+    if not path:
+        return ""
+    style = f"background-image:url('{path.as_uri()}')" + (f";background-position:{pos}" if pos else "")
+    return f'<div class="{cls}" style="{style}"></div>'
 
 
 def slide_html(s, i, n, brand, spec_dir):
     tipo = s["tipo"]
     estilo = brand.get("estilo", "energico")
     img = resolve(s.get("imagen"), spec_dir)
+    pos = s.get("posicion")            # encuadre de la foto: "30% center", "right", etc.
     titulo = esc(s.get("titulo"))
     texto = esc(s.get("texto"))
     regla = '<div class="regla"></div>' if estilo == "elegante" else ""
@@ -393,7 +397,7 @@ def slide_html(s, i, n, brand, spec_dir):
     if tipo == "portada":
         if img:
             classes.append("con-foto")
-            pre = bg(img) + '<div class="velo"></div>'
+            pre = bg(img, pos=pos) + '<div class="velo"></div>'
         etq = esc(s.get("etiqueta", ""))
         body = (f'<div class="etiqueta">{etq}</div>' if etq else "") + \
             f'<div class="titulo">{titulo}</div>' + \
@@ -404,10 +408,10 @@ def slide_html(s, i, n, brand, spec_dir):
     elif tipo == "idea":
         num = s.get("numero")
         body = (f'<div class="num cifra">{esc(num)}</div>' if num else "") + \
-            (bg(img, "foto") if img else "") + regla + \
+            (bg(img, "foto", pos) if img else "") + regla + \
             f'<div class="titulo">{titulo}</div><div class="texto suave">{texto}</div>'
     elif tipo == "ficha":
-        foto = bg(img, "foto") if img else '<div class="foto vacia"></div>'
+        foto = bg(img, "foto", pos) if img else '<div class="foto vacia"></div>'
         precio = f'<div class="precio cifra">{esc(s["precio"])}</div>' if s.get("precio") else ""
         foto = foto.replace("></div>", f">{precio}</div>", 1) if precio else foto
         datos = "".join(
@@ -423,7 +427,7 @@ def slide_html(s, i, n, brand, spec_dir):
             cols += f'<div class="col"><h3 class="titulo">{esc(d.get("titulo"))}</h3><ul>{pts}</ul></div>'
         body = f'<div class="titulo">{titulo}</div><div class="cols">{cols}</div>'
     elif tipo == "imagen":
-        pre = bg(img) + '<div class="velo"></div>'
+        pre = bg(img, pos=pos) + '<div class="velo"></div>'
         body = regla + f'<div class="titulo">{titulo}</div>' + (f'<div class="texto">{texto}</div>' if texto else "")
     elif tipo == "resumen":
         pts = "".join(f'<li class="texto">{esc(p)}</li>' for p in s.get("puntos") or [])

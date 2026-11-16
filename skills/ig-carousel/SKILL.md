@@ -124,7 +124,7 @@ fotos con un dato cada una (`imagen`), para quién es, cómo se compra
 5. Escribe el caption con `/ig-caption`. Para carrusel casi siempre es
    Trabajo B: la portada ya gastó sus seis palabras.
 
-Las fotos van en una carpeta junto al JSON (rutas relativas). Si la foto viene
+Las fotos van en una carpeta junto al JSON (rutas relativas). Los renders suelen ser horizontales y el carrusel es vertical: usa `"posicion"` (por ejemplo `"25% center"`) para elegir qué parte de la foto se ve, y revisa que no quede texto mal generado por IA (letreros con letras raras) dentro del encuadre. Si la foto viene
 de Drive o del computador del usuario, cópiala primero ahí.
 
 ## Salida
