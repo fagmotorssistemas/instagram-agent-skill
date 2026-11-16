@@ -1,0 +1,23 @@
+{
+  "nombre": "La Vilet",
+  "handle": "@lavilet",
+  "nota": "Tipografía oficial de marca: Italiana para títulos, logo, cifras y metros cuadrados; Archivo Expanded (font-stretch 125%) para textos, etiquetas y botones, grosor 100-400. Los colores son una propuesta sobria: ajústalos a los oficiales. Verifica el handle.",
+  "estilo": "elegante",
+  "logo": null,
+  "colores": {
+    "fondo": "#F3EEE6",
+    "fondo_alt": "#1E1D1B",
+    "texto": "#1E1D1B",
+    "texto_suave": "#6E675E",
+    "acento": "#A6875A",
+    "texto_sobre_acento": "#FFFFFF"
+  },
+  "fuentes": {
+    "titulo": {"familia": "Italiana", "archivo": "../fuentes/Italiana-Regular.ttf", "peso": 400, "ancho": 100, "mayusculas": false, "espaciado": "0.01em"},
+    "texto": {"familia": "Archivo", "archivo": "../fuentes/Archivo-Variable.ttf", "peso": 300, "ancho": 125, "mayusculas": false, "espaciado": "0.01em"},
+    "etiqueta": {"familia": "Archivo", "archivo": "../fuentes/Archivo-Variable.ttf", "peso": 400, "ancho": 125, "mayusculas": true, "espaciado": "0.28em"},
+    "cifras": {"familia": "Italiana", "archivo": "../fuentes/Italiana-Regular.ttf", "peso": 400, "ancho": 100, "mayusculas": false, "espaciado": "0"}
+  },
+  "cta_por_defecto": "Agenda tu visita al departamento modelo",
+  "cierre": "La Vilet · Puertas del Sol, Cuenca"
+}

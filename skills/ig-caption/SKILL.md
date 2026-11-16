@@ -1,119 +1,117 @@
 ---
 name: ig-caption
 description: >-
-  Write the Instagram caption - the line that survives the "... more" cut, the
-  body, the single ask, the search terms and the three hashtags - and lint it
-  before it goes out. Use when the user says "write the caption", "caption this",
-  "what do I put in the description", has a reel or a carousel ready and needs
-  the text, or asks about hashtags.
+  Escribe el caption de Instagram para KsiNuevos o La Vilet: la línea que
+  sobrevive al corte de "... más", el cuerpo, el único pedido, los términos de
+  búsqueda y los hashtags, y lo revisa antes de publicar. Úsala cuando pidan
+  "escribe el caption", "la descripción", "el copy del post", tengan un reel o
+  carrusel listo y necesiten el texto, o pregunten por hashtags.
 ---
 
 # ig-caption
 
-One tool lives in this folder and it runs:
+Una herramienta vive en esta carpeta y funciona:
 
 ```bash
 python3 caption.py caption.txt
-python3 caption.py caption.txt --keywords "client proposals,agency pricing"
+python3 caption.py caption.txt --keywords "autos usados Cuenca,Toyota Fortuner"
 ```
 
-It prints the caption the way the feed prints it: the first 125 characters in a
-box, everything else behind the tap. Read that box before you read anything
-else you wrote.
+Imprime el caption como lo imprime el feed: los primeros 125 caracteres en una
+caja, todo lo demás detrás del toque. Lee esa caja antes que cualquier otra
+cosa que escribiste.
 
-## First, decide which job this caption has
+## Primero: ¿qué trabajo tiene este caption?
 
-This is the decision that ruins captions when it is skipped.
+Esta es la decisión que arruina captions cuando se salta.
 
-**Job A: the video already hooked them.** A Reel carries its own hook in the
-first two seconds, spoken and on screen. The caption is not a second hook and
-competing with the video is how you lose both. Its job is the ask, the context
-that makes the ask make sense, and the words people search.
+**Trabajo A: el video ya enganchó.** Un Reel trae su propio gancho en los
+primeros dos segundos. El caption no es un segundo gancho, y competir con el
+video es la forma de perder los dos. Su trabajo es el pedido, el contexto que
+hace que el pedido tenga sentido, y las palabras que la gente busca.
 
-**Job B: the caption is the content.** A photo, a single image, a carousel
-cover that opens a loop. Here line one is the hook and it works exactly like a
-Reel hook: concrete, short, and cut off at a cliff rather than mid-clause.
+**Trabajo B: el caption es el contenido.** Una foto, un carrusel cuya portada
+abre una pregunta. Aquí la línea uno es el gancho y funciona igual que el de
+un Reel: concreta, corta, y cortada en una intriga, no a mitad de frase.
 
-Ask which one you are writing. If the user has a Reel with a strong hook,
-write A and say why.
+Di cuál estás escribiendo.
 
-## The shape
-
-```
-Line 1      125 characters of visible space. Job A: the ask, plainly.
-            Job B: the hook.
-            Never a greeting, never a hashtag, never an emoji as the first
-            character.
-Body        short paragraphs, one line of white space between each. Two to six
-            of them. This is where the search terms live.
-The ask     one. Comment a keyword, save it, or DM. One.
-Hashtags    up to five, on their own line at the bottom, or none.
-```
-
-Limit is 2,200 characters and almost nothing needs 2,200. A caption that earns
-the tap and then delivers 600 characters beats one that delivers 1,800.
-
-## Hashtags, honestly
-
-Hashtags are not a reach lever any more, and the platform has now said so with
-a product change. **Instagram capped hashtags at five per post on 18 December
-2025**, down from thirty, telling creators that "using fewer (up to 5) more
-targeted hashtags, rather than many generic ones" performs better. Adam Mosseri
-had already said in February 2025 that hashtags do not work to increase reach
-and are a label, not a distribution lever.
-
-So: up to five, specific, as topic labels. If the user has a block of twenty
-saved in their notes app, that block is now dead weight and the linter will
-fail it.
-
-`#viral`, `#fyp`, `#explorepage`, `#foryou` describe nothing. Cut them.
-
-## Search terms matter more than hashtags now
-
-Instagram search reads the caption text. So the phrase the user wants to be
-found for goes in the caption as a phrase a human would type, in a sentence
-that reads normally. "Client proposals" as words in line three, not
-"#clientproposals" in a block at the bottom.
-
-Ask for two or three of those terms, then pass them to the linter:
-
-```bash
-python3 caption.py draft.txt --keywords "client proposals,agency pricing"
-```
-
-## Rules
-
-- **No link in the caption.** Captions are not clickable. A URL in the body is
-  dead text that says "I do not use this platform". Bio or DM.
-- **One ask.** Two asks is the same as none. `caption.py` counts them.
-- **The keyword ask needs a keyword people can type.** One word, no spaces, no
-  emoji, and say it out loud in the video too. `Comment CONTRACT` works.
-  `Comment "the contract guide"` does not.
-- **Write the first comment separately** if there is a link. Say so in the
-  receipt.
-- **Emoji as punctuation, not decoration.** The linter flags anything over
-  4 per 100 characters.
-- **Alt text is worth 20 seconds.** For carousels and photos, write it. It is
-  read by screen readers and by Instagram.
-
-## The loop
-
-1. Decide Job A or Job B and say which.
-2. Draft it.
-3. Run `/ig-human` on it. Captions are short, so slop is louder here than
-   anywhere else in the pack.
-4. Run `caption.py` with the user's search terms. Fix every FAIL. Decide on
-   every WARN out loud rather than silently.
-5. Print the copy-ready block, then the receipt:
+## La forma
 
 ```
-CAPTION READY
-job:        A - the reel carries the hook
-visible:    118 of 125 characters used before the cut
-ask:        one, comment CONTRACT
+Línea 1     125 caracteres visibles. Trabajo A: el pedido, claro.
+            Trabajo B: el gancho.
+            Nunca un saludo, nunca un hashtag, nunca un emoji de primer carácter.
+Cuerpo      párrafos cortos, una línea en blanco entre cada uno. Dos a seis.
+            Aquí van los términos de búsqueda y los datos (año, km, m²).
+El pedido   uno. Comentar una palabra, escribir al WhatsApp, o agendar visita.
+Hashtags    hasta cinco, en su propia línea al final, o ninguno.
+```
+
+El límite es 2.200 caracteres y casi nada los necesita.
+
+## Por marca
+
+**KsiNuevos.** Datos primero: modelo, año, kilometraje, dueños, motor, caja.
+Luego lo que resuelve (parte de pago, financiamiento). Pedido de marca:
+"Comenta {MODELO} y te mando toda la info". Términos de búsqueda: "autos
+usados Cuenca", "{marca} {modelo} {año}", "camionetas usadas Cuenca", "SUV
+usada Cuenca".
+
+**La Vilet.** Frases sobrias, sin signos de exclamación en cadena, sin emojis
+de fuego. Datos en cifras: m², piso, amenidades, ubicación (Puertas del Sol).
+Concepto: un nuevo estilo de vida, todo sin salir de casa, el proyecto mejor
+ubicado de la zona. Nunca clasista. Pedido: agendar visita al departamento
+modelo, o escribir. Términos: "departamentos en Cuenca", "departamentos
+Puertas del Sol", "suites en Cuenca", "locales comerciales en arriendo Cuenca"
+cuando el post es de locales.
+
+## Hashtags, con honestidad
+
+Instagram limitó los hashtags a **cinco por post desde el 18 de diciembre de
+2025** (antes eran 30) y ha dicho que son una etiqueta de tema, no una palanca
+de alcance. Entonces: hasta cinco, específicos. `#viral`, `#parati`, `#fyp`,
+`#explorar` no describen nada; el revisor los marca.
+
+## Los términos de búsqueda importan más que los hashtags
+
+El buscador de Instagram lee el texto del caption. La frase por la que la
+marca quiere aparecer va en el caption como la escribiría una persona, dentro
+de una oración normal. "Autos usados en Cuenca" como palabras en la línea 3,
+no "#autosusadoscuenca" en un bloque al final.
+
+## Reglas
+
+- **Sin links en el caption.** No se puede hacer clic. Bio, historia con
+  sticker de link, o DM.
+- **Un solo pedido.** Dos pedidos es lo mismo que ninguno. `caption.py` los
+  cuenta (incluye "escríbenos al WhatsApp" y "agenda tu visita").
+- **La palabra clave tiene que poder escribirse.** Una palabra, sin espacios,
+  sin emoji, y dicha también en el video. `Comenta FORTUNER` funciona.
+  `Comenta "la info de la camioneta"` no.
+- **Emojis como puntuación, no como decoración.** El revisor marca más de 4
+  por cada 100 caracteres. En La Vilet, idealmente cero o uno.
+- **Nunca inventes datos.** Precio, km o m² que no tengas: `{{precio}}`.
+- **Texto alternativo** para carruseles y fotos: 20 segundos que valen.
+
+## El ciclo
+
+1. Decide Trabajo A o B y dilo.
+2. Redáctalo.
+3. Pásalo por `/ig-human`. Los captions son cortos: el relleno se nota más
+   aquí que en cualquier otro lado.
+4. Corre `caption.py` con los términos de búsqueda. Arregla cada FALLA.
+   Decide en voz alta cada AVISO.
+5. Entrega el bloque listo para copiar, y el resumen:
+
+```
+CAPTION LISTO  ·  KsiNuevos
+trabajo:    A - el reel trae el gancho
+visible:    118 de 125 caracteres antes del corte
+pedido:     uno, comentar FORTUNER
 hashtags:   3
-search:     "client proposals" in line 3, "agency pricing" in line 5
-linter:     READY
+búsqueda:   "autos usados Cuenca" en la línea 3, "Toyota Fortuner" en la línea 1
+revisión:   LISTO
 ```
 
-Nothing is posted. The user pastes it.
+No se publica nada. La persona lo pega.

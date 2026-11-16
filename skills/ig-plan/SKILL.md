@@ -1,100 +1,104 @@
 ---
 name: ig-plan
 description: >-
-  Build the week on Instagram - what to post, which format, when, and who to
-  engage with. Use when the user says "plan my week", "what should I post",
-  "content calendar", "I have nothing to post about", or wants a posting
-  schedule and an engagement list.
+  Arma la semana de Instagram para KsiNuevos o La Vilet: qué publicar, en qué
+  formato, cuándo, y con quién interactuar. Úsala cuando pidan "planifica la
+  semana", "qué publicamos", "calendario de contenido", "no tengo de qué
+  publicar", o quieran un horario de publicación y una lista de interacción.
 ---
 
 # ig-plan
 
-The control room. Everything else in this pack executes; this decides what gets
-executed. Run it once a week, on the same day.
+La sala de control. Todo lo demás en este paquete ejecuta; esto decide qué se
+ejecuta. Córrelo una vez por semana, el mismo día, **una vez por marca**.
 
-## Input
+## Entrada
 
-If `~/.claude/instagram/voice.md`, `swipe.md` and `log.md` exist, read them.
-The swipe file is the user's own evidence from `/ig-viral` about which formulas
-are landing in their niche right now, and it outranks anything in this file.
-The log stops the plan repeating a theme from the last fortnight.
+Lee, si existen, `~/.claude/instagram/<marca>/voz.md`, `swipe.md` y `log.md`.
+El swipe es la evidencia propia de `/ig-viral` sobre qué fórmulas funcionan
+ahora, y manda sobre cualquier cosa de este archivo. El log evita repetir un
+tema de las últimas dos semanas.
 
-If they do not exist, ask for four things and write them down:
+Si no existen, pide cuatro cosas y anótalas:
 
-1. What the user sells, and to whom.
-2. The three or four themes they want to be known for.
-3. What actually happened this week: a client call, a number, a mistake, a
-   thing they built, an argument they had. This is where posts come from.
-4. Ten accounts worth being visible to.
+1. Qué se vende y a quién. (KsiNuevos: inventario de esta semana, qué llegó,
+   qué se vendió, por categoría SUV / sedán / camioneta. La Vilet: qué tipo
+   de unidad se empuja: locales en arriendo, suites, departamentos,
+   penthouses; para uso personal o inversión.)
+2. Los tres o cuatro temas por los que quieren ser conocidos.
+3. Qué pasó de verdad esta semana: un carro que llegó, una entrega, una
+   pregunta de cliente, un avance de obra, una visita al piso modelo. De aquí
+   salen los posts.
+4. Diez cuentas a las que vale la pena ser visibles.
 
-## What to post
+## Qué publicar
 
-Four to five posts a week, and at least three of them Reels. Reels are the only
-format on Instagram that reliably reaches people who do not follow the account.
-Carousels go deep with the people who already do. Stories are daily and are
-planned separately.
+Cuatro o cinco posts a la semana, al menos tres Reels. Los Reels son el único
+formato que llega de forma fiable a quien no sigue la cuenta. Los carruseles
+profundizan con los que ya siguen. Las historias son diarias y van aparte.
 
-Mix across the week, never two of the same type back to back:
+Mezcla en la semana, nunca dos del mismo tipo seguidos:
 
-| type | share | job |
+| tipo | cuánto | trabajo |
 | --- | --- | --- |
-| **Proof** | 1 per week | something that happened, with a number. Reel. |
-| **Teach** | 1 to 2 per week | one thing the viewer can do today. Reel or carousel. |
-| **Opinion** | 1 per week | a position that could lose you followers. Reel. |
-| **Story** | 1 per fortnight | a scene with a cost. Reel. |
-| **Offer** | 1 per fortnight | what you sell, said plainly, no apology. Carousel or stories. |
+| **Prueba** | 1 por semana | algo que pasó, con un dato. Entrega, avance de obra. Reel. |
+| **Enseñar** | 1 a 2 por semana | algo que quien mira puede hacer hoy. Reel o carrusel. |
+| **Opinión** | 1 por semana | una postura que algunos no compartirían. Reel. |
+| **Historia** | 1 cada dos semanas | una escena con un costo. Reel. |
+| **Oferta** | 1 a 2 por semana | qué se vende, dicho claro, sin disculparse. Carrusel ficha o Reel. |
 
-For each slot give: the theme, the specific angle from what actually happened
-this week, the format, and the hook formula number from `ig-reel/hooks.json`.
-Not a topic, an angle. "AI" is not a plan. "The proposal we lost because the
-draft had an em dash in it" is a Reel.
+Para KsiNuevos, la oferta pesa más (objetivo: ventas directas con pauta), así
+que puede ser 2 por semana, siempre con el carro como centro y un solo
+pedido.
 
-## When to post
+Para cada espacio da: el tema, el ángulo específico de lo que pasó esta
+semana, el formato y el número de fórmula de `ig-reel/hooks.json`. No un
+tema: un ángulo. "Autos" no es un plan. "La Tucson que llegó con todos los
+mantenimientos y por qué eso vale $1.500 más" es un Reel.
 
-Post when the user's audience is awake and not at work. For most consumer
-audiences that is early evening local time; for a business audience, early
-morning.
+## Cuándo publicar
 
-But say this plainly: **the hour matters far less than the first two seconds.**
-Instagram will keep showing a Reel for days if it performs, and will bury a
-well-timed one that does not. If the user is optimising posting times before
-their hooks work, they are polishing the wrong thing, and you should say so.
+Cuando la audiencia está despierta y no trabajando. En Cuenca, para público
+general, temprano en la noche (19:00 a 21:00); para un público de inversión o
+profesionales, temprano en la mañana o al mediodía.
 
-Anchor times to the audience's timezone, not the user's, if those differ.
+Pero dilo claro: **la hora importa mucho menos que los primeros dos
+segundos.** Si la marca está optimizando horarios antes de que sus ganchos
+funcionen, está puliendo lo equivocado.
 
-## The engagement round, which is not optional
+## La ronda de interacción, que no es opcional
 
-20 minutes a day, before posting, not after. Build a list of 10:
+20 minutos al día, antes de publicar. Lista de 10:
 
-- **5 reach** - accounts with an audience the user wants, where a good comment
-  gets seen. Comment early, before the thread is 200 deep.
-- **3 peers** - same size, same field. This is the group that reciprocates.
-- **2 buyers** - people who could actually buy. Comment for weeks before any
-  DM, and never pitch in a comment.
+- **5 de alcance** - cuentas con la audiencia que la marca quiere (medios
+  locales de Cuenca, creadores de autos, de arquitectura). Comenta temprano.
+- **3 pares** - mismo tamaño, mismo rubro o rubro vecino.
+- **2 compradores** - gente o negocios que podrían comprar o arrendar.
+  Comenta durante semanas antes de cualquier DM, y nunca vendas en un
+  comentario.
 
-Hand the list to `/ig-comment`.
+Pasa la lista a `/ig-comment`.
 
-## Output
+## Salida
 
 ```
-WEEK OF SEP 15
+SEMANA DEL 17 DE NOV  ·  KsiNuevos
 
-MON  engage only  (20 min, list below)
-TUE  7:30pm  REEL      PROOF    #5  Time Collapse   - 5hr proposal to 20 min
-WED  stories only + engage
-THU  7:00pm  CAROUSEL  TEACH    Job B caption       - the 4-slide clause breakdown
-FRI  7:30pm  REEL      OPINION  #2  Negative Command - stop doing discovery calls
-SAT  -
-SUN  6:00pm  REEL      STORY    #21 Mid-Sentence    - the refund email
+LUN  solo interacción  (20 min, lista abajo)
+MAR  19:30  REEL      OFERTA     #24 La Revelación   - la Fortuner que acaba de llegar
+MIÉ  historias + interacción
+JUE  19:00  CARRUSEL  ENSEÑAR    Trabajo B           - 6 cosas que revisar antes de firmar
+VIE  19:30  REEL      OPINIÓN    #2  Orden Negativa  - no compres sin pedir el historial
+SÁB  11:00  REEL      OFERTA     #17 Cara a Cara     - Hilux vs D-Max: para quién es cada una
+DOM  -
 
-STORIES  every day, 3 to 5 frames, question box on Thursday.
+HISTORIAS  todos los días, 3 a 5 cuadros, caja de preguntas el jueves.
 
-ENGAGE  (5 reach / 3 peers / 2 buyers)
+INTERACCIÓN  (5 alcance / 3 pares / 2 compradores)
   ...
 
-Say "write Tuesday" and I will draft it.
+Di "escribe el martes" y lo redacto.
 ```
 
-Write the plan to `~/.claude/instagram/plan.md` so the other skills can read
-it. Nothing is scheduled or posted anywhere. This is a plan and the user runs
-it.
+Guarda el plan en `~/.claude/instagram/<marca>/plan.md`. No se programa ni se
+publica nada. Es un plan y el equipo lo ejecuta.

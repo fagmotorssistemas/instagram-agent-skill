@@ -1,0 +1,16 @@
+{
+  "marca": "ksinuevos",
+  "alt": "Portada: 6 cosas que revisar antes de comprar un carro usado, con una camioneta en el patio de KsiNuevos en Cuenca.",
+  "slides": [
+    {"tipo": "portada", "etiqueta": "Antes de comprar", "titulo": "Revisa esto antes de firmar", "subtitulo": "6 cosas que en el patio miramos primero."},
+    {"tipo": "gancho", "texto": "Un carro usado no se compra por la foto. Se compra por lo que no sale en la foto."},
+    {"tipo": "idea", "numero": "01", "titulo": "Los pernos del capó", "texto": "Si están pintados o marcados con llave, ese carro tuvo un golpe de frente."},
+    {"tipo": "idea", "numero": "02", "titulo": "El historial de mantenimientos", "texto": "Pide las facturas. Sin papeles, el kilometraje es solo un número en el tablero."},
+    {"tipo": "idea", "numero": "03", "titulo": "La alfombra del piso", "texto": "Levántala. Humedad o lodo seco abajo es la pista de que estuvo en agua."},
+    {"tipo": "comparacion", "titulo": "Prueba de manejo: qué mirar",
+     "izquierda": {"titulo": "En frío", "puntos": ["Que arranque al primer intento", "Humo azul o blanco", "Ruidos al prender"]},
+     "derecha": {"titulo": "En subida", "puntos": ["Que no cabecee", "Cambios suaves", "Freno firme al bajar"]}},
+    {"tipo": "resumen", "titulo": "La lista completa", "puntos": ["Pernos del capó", "Facturas de mantenimiento", "Alfombra seca", "Arranque en frío", "Subida y bajada", "Papeles y matrícula al día"]},
+    {"tipo": "cta", "titulo": "Comenta LISTA", "texto": "y te mando esta guía en PDF para que la lleves al patio que sea.", "boton": "Comenta LISTA"}
+  ]
+}

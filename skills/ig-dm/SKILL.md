@@ -1,118 +1,127 @@
 ---
 name: ig-dm
 description: >-
-  Write Instagram DMs that get replies - the keyword delivery, the first
-  message to someone who engaged, the collab pitch, and the two follow-ups. Use
-  when the user says "DM this person", "what do I send them", "outreach
-  message", "how do I follow up", "pitch this brand", or is reaching out to
-  someone specific.
+  Escribe DMs de Instagram que reciben respuesta, para KsiNuevos o La Vilet:
+  la entrega de la palabra clave, el primer mensaje a quien interactuó, la
+  propuesta de colaboración o de arriendo de local, y los dos seguimientos.
+  Úsala cuando digan "escríbele a esta persona", "qué le mando", "mensaje de
+  seguimiento", "cómo le doy seguimiento a este lead", o estén contactando a
+  alguien específico.
 ---
 
 # ig-dm
 
-Instagram DMs are the only place on the platform where money actually changes
-hands, and they are also where most accounts burn the goodwill their content
-earned. The difference is entirely about who moved first.
+Los DMs (y el WhatsApp al que llevan) son el único lugar donde de verdad se
+cierra la venta, y también donde la mayoría de cuentas quema la buena
+voluntad que ganó su contenido. La diferencia está en quién se movió primero.
 
-## The three kinds of DM, and only three are worth writing
+## Los tres tipos de DM que vale la pena escribir
 
-**1. The reply to a hand raised.** They commented the keyword, answered the
-poll, replied to a story, or saved and asked. They moved first. This is 90% of
-the DMs worth sending and it converts because it is not outreach.
+**1. La respuesta a una mano levantada.** Comentaron la palabra clave,
+votaron la encuesta, respondieron una historia, preguntaron precio. Se
+movieron primero. Es el 90% de los DMs que valen la pena, y convierte porque
+no es prospección.
 
-**2. The warm approach.** Someone whose posts the user has genuinely been
-commenting on for weeks. There is a shared thread of conversation already.
+**2. El acercamiento tibio.** Alguien con quien la cuenta ya conversa en
+comentarios desde hace semanas.
 
-**3. The collab or brand pitch.** A specific proposal to a specific account,
-with a reason it is them.
+**3. La propuesta.** Una colaboración con un creador, o la propuesta de
+arriendo de un local comercial de La Vilet a un restaurante o negocio
+específico, con una razón concreta de por qué es para ellos.
 
-Everything else is cold DMing strangers, which is what everybody else does, and
-it is why reply rates sit where they do. If the user is asking for a cold
-sequence, say plainly that it is the lowest-yield thing they could do with the
-same hour, and offer the alternative: comment on those ten accounts for two
-weeks first. Then write it if they still want it.
+Todo lo demás es escribirle en frío a desconocidos. Si piden una secuencia en
+frío, di que es lo de menor rendimiento que podrían hacer con esa hora, y
+ofrece la alternativa: comentar en esas cuentas dos semanas primero. Si igual
+la quieren, escríbela.
 
-## Before writing, get the specifics
+## Antes de escribir, consigue lo específico
 
-Ask in one batched question:
+Una sola pregunta agrupada:
 
-1. **Who** - handle, what they do, and what they posted or did that started
-   this.
-2. **The trigger** - the actual reason to message today. A keyword they
-   commented, a story they replied to, a post they published. Not "they fit the
-   ICP".
-3. **What the user wants** - a conversation, a sale, a collab, a referral. Be
-   honest internally, even if the message does not lead with it.
+1. **Quién** - el @, qué hace, y qué publicó o hizo que inició esto.
+2. **El disparador** - la razón real para escribir hoy: la palabra que
+   comentó, la historia que respondió, el carro por el que preguntó.
+3. **Qué quiere la marca** - una visita, una prueba de manejo, una venta, un
+   arriendo, una colaboración.
 
-If there is no trigger, there is no message. Say so.
+Si no hay disparador, no hay mensaje. Dilo.
 
-## The keyword delivery
+## La entrega de la palabra clave
 
-The most common DM in this pack and the easiest to ruin. They commented one
-word. They are expecting the thing. So:
+El DM más común del paquete y el más fácil de arruinar. Comentaron una
+palabra. Esperan la cosa. Entonces:
 
 ```
-{their name}, here it is: {the thing, or the link}.
+{nombre}, aquí está: {la info, el video, la guía, el link}.
 
-{one line on how to use it}
+{una línea de cómo usarla o del siguiente paso}
 
-{one question they can answer in four words}
+{una pregunta que se responde en cuatro palabras}
 ```
 
-Send the thing **first**, in message one, with no gate. A keyword post that
-delivers a "before I send it, can I ask what you do?" is a bait and switch and
-it is remembered. The question at the end is what starts the conversation, and
-it is optional for them.
+KsiNuevos: la info completa del carro **en el primer mensaje** (año, km,
+precio si es público, fotos o video), y la pregunta: "¿Tienes carro para dar
+como parte de pago?". La Vilet: la información de la unidad o del proyecto y
+"¿Te gustaría conocer el departamento modelo esta semana?".
 
-Automated keyword replies are a supported feature for professional accounts,
-through Instagram's own tools or an approved partner. Using that is fine.
-Sending unsolicited bulk DMs is not, and it is the fastest route to a
-restricted account.
+Manda lo prometido **primero**, sin condiciones. Un "antes de mandártelo,
+¿me dices a qué te dedicas?" es una trampa y se recuerda.
 
-## The first message to someone warm
+Las respuestas automáticas por palabra clave son una función permitida para
+cuentas profesionales, con las herramientas de Instagram o socios
+aprobados. Mandar DMs masivos no solicitados no lo es, y es la ruta más rápida
+a una cuenta restringida.
 
-- **Two to four sentences.** A screen of text is a delete.
-- **Reference the specific thing.** The comment, the post, the reply. In their
-  words.
-- **Give before asking.** A number, a template, a name, an answer.
-- **One ask, small.** "Worth a quick call?" beats "let me walk you through the
-  platform".
-- **No link and no calendar in message one.** It reads as a funnel because it
-  is one.
-- **No voice note to a stranger.** It is a great tool and it is for people who
-  already know the user's voice.
+## Pasar a WhatsApp
 
-## The collab pitch
+Para un auto o una visita, el cierre suele terminar en WhatsApp. Ofrécelo
+como comodidad, no como embudo: "Si te es más fácil, te mando los videos por
+WhatsApp, ¿a qué número?". Nunca pidas el número antes de haber entregado lo
+prometido.
 
-Four lines, in this order: what you have watched them do, the specific idea,
-what they get, what you need from them. A collab post lands on both grids and
-reaches both audiences, which is the strongest single growth mechanic on
-Instagram that does not involve paying anybody. Pitch it as that and be
-concrete about who does what.
+## El primer mensaje a alguien tibio
 
-## Follow-ups
+- **Dos a cuatro oraciones.** Una pantalla de texto se borra.
+- **Menciona lo específico.** El comentario, el post, la respuesta. Con sus
+  palabras.
+- **Da antes de pedir.** Un dato, un video, una respuesta.
+- **Un pedido, pequeño.** "¿Te mando un video del motor?" le gana a "déjame
+  presentarte todo nuestro inventario".
+- **Sin link ni calendario en el primer mensaje.**
+- **Sin nota de voz a un desconocido.** Es una gran herramienta para quien ya
+  conoce la voz del vendedor.
 
-Two. That is the number.
+## La propuesta (colaboración o arriendo de local)
 
-- **+4 days** - add something new. Never "just bumping this". If there is
-  nothing new, there is no follow-up.
-- **+10 days** - the close-the-loop message. Say you will stop, and mean it.
-  This one gets a surprising share of the total replies, because it removes the
-  pressure.
+Cuatro líneas, en este orden: qué has visto que hacen, la idea concreta, qué
+ganan ellos, qué necesitas tú. Para un local de La Vilet: por qué su negocio
+encaja con el flujo de gente del edificio y de Puertas del Sol, qué local,
+qué necesitarías de ellos (una visita). Sé concreto con quién hace qué.
 
-Then stop. A third converts nobody and costs the relationship.
+## Seguimientos
 
-## Never
+Dos. Ese es el número.
 
-- Never automate outreach DMs, and never use a tool that sends on a schedule to
-  people who did not interact. It violates Instagram's Terms of Use and
-  restricts the account.
-- Never fabricate having watched something, a mutual, or a shared anything.
-- Never open with "Hey! Quick question" and then not ask a question.
-- Never send the pitch in the same message as the compliment.
+- **+4 días** - agrega algo nuevo (llegó otro carro parecido, bajó el precio
+  de verdad, hay fotos nuevas de obra). Nunca "solo para recordarte". Si no
+  hay nada nuevo, no hay seguimiento.
+- **+10 días** - el mensaje que cierra el ciclo. Di que no vas a insistir, y
+  cúmplelo. Este recibe una parte sorprendente de las respuestas.
 
-## Output
+Después, para. Un tercero no convierte a nadie y desgasta la relación.
 
-The message, the character count, and the two follow-ups with the day each
-goes out, all run through `/ig-human`. The user sends every one of them by
-hand, or through their own approved automation for keyword replies only.
+## Nunca
+
+- Nunca automatices DMs de prospección ni uses herramientas que manden
+  mensajes programados a quien no interactuó. Viola los Términos de
+  Instagram y restringe la cuenta.
+- Nunca inventes haber visto algo, un conocido en común, un "otro cliente
+  interesado" o una urgencia.
+- Nunca abras con "¡Hola! Una pregunta rápida" y luego no preguntes nada.
+- Nunca mandes la oferta en el mismo mensaje que el cumplido.
+
+## Salida
+
+El mensaje, el conteo de caracteres, y los dos seguimientos con el día de
+cada uno, todo pasado por `/ig-human`. La persona manda cada uno a mano, o
+con su automatización aprobada solo para respuestas de palabra clave.
