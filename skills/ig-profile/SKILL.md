@@ -1,82 +1,84 @@
 ---
 name: ig-profile
 description: >-
-  Score an Instagram profile out of 100 against a 12-part rubric and rewrite
-  the parts that lose points - name field, bio, link, highlights, pinned three,
-  grid. Use when the user says "optimize my profile", "fix my bio", "score my
-  Instagram", "why don't people follow me", or pastes their profile and asks how
-  it reads.
+  Califica un perfil de Instagram (KsiNuevos o La Vilet) sobre 100 con una
+  rúbrica de 12 partes y reescribe lo que pierde puntos: campo de nombre, bio,
+  link, destacadas, los tres fijados, grid. Úsala cuando pidan "optimiza el
+  perfil", "arregla la bio", "califica nuestro Instagram", "por qué no nos
+  siguen", o peguen el perfil y pregunten cómo se lee.
 ---
 
 # ig-profile
 
-Almost everybody optimises the wrong thing here. The profile is not a
-storefront people browse. It is a **decision screen**, arrived at from one
-reel, and it gets about three seconds to answer one question: is there more of
-that here, and is it for me.
+Casi todos optimizan lo equivocado aquí. El perfil no es una vitrina que la
+gente recorre. Es una **pantalla de decisión**, a la que se llega desde un
+reel, y tiene unos tres segundos para responder una pregunta: ¿hay más de eso
+aquí, y es para mí?
 
-## Input
+## Entrada
 
-Ask the user to paste or screenshot: the name field, the handle, the bio, what
-the link points to, the highlight names, what is pinned, and the first nine
-grid covers. A screenshot of the top of the profile plus the first two grid
-rows is enough for a first pass.
+Pide que peguen o capturen: el campo de nombre, el @, la bio, a dónde lleva el
+link, los nombres de las destacadas, qué está fijado, y las primeras nueve
+portadas del grid. Una captura de la parte de arriba del perfil más las dos
+primeras filas basta para una primera pasada.
 
-Do not log into Instagram on their behalf.
+No inicies sesión en Instagram por nadie.
 
-## Score it
+## Califícalo
 
-Read `rubric.json` in this folder. Twelve items, 100 points, each with what
-full marks looks like and how it usually fails. Score every item, show the
-table, give the total. Be honest. Most profiles land in the 30s and 40s on the
-first pass and a generous score is useless.
+Lee `rubric.json` en esta carpeta. Doce ítems, 100 puntos, cada uno con cómo
+se ve el puntaje completo y cómo suele fallar. Califica todo, muestra la
+tabla, da el total. Sé honesto: la mayoría saca entre 30 y 49 la primera vez.
 
 ```
-PROFILE SCORE  38/100
+PUNTAJE DEL PERFIL  38/100
 
-  name field       2/12   name only, no words anyone searches
-  bio first line   3/12   three nouns and a coffee emoji
-  pinned three     0/10   nothing pinned
-  highlights       2/8    "Random", "Life", "2023"
-  grid legibility  4/8    six of nine covers are a face mid-sentence
+  campo de nombre    2/12   solo el nombre, sin palabras que alguien busque
+  bio línea uno      3/12   "Calidad | Confianza | Garantía"
+  tres fijados       0/10   nada fijado
+  destacadas         2/8    "Promo", "Varios", "2023"
+  grid               4/8    seis de nueve portadas son una cara a mitad de frase
   ...
 ```
 
-## Then rewrite, in this order
+## Luego reescribe, en este orden
 
-Fix in descending order of points lost. Do not rewrite everything at once, the
-user has to actually go and change each of these.
+En orden de puntos perdidos. No todo de golpe: alguien tiene que ir a cambiar
+cada campo.
 
-**1. The name field (30 characters).** The bold line under the photo, not the
-handle. This is the field Instagram search matches against, and most accounts
-put a name in it and nothing else. Format that works:
-`{Name} | {what you do, in searched words}`. Give three options.
+**1. El campo de nombre (30 caracteres).** La línea en negrita, no el @. Es
+lo que indexa el buscador. Formato: `{Marca} | {lo que hace, en palabras que
+se buscan}`. Da tres opciones. Ej.: `KsiNuevos | Autos usados Cuenca`,
+`La Vilet | Departamentos Cuenca`.
 
-**2. Bio line one.** Who this is for and what changes. Not a job title, not
-adjectives, not a pipe-separated list of identities. The rest of the 150
-characters carries one piece of proof or one plain offer.
+**2. Bio, línea uno.** Para quién es y qué le cambia. KsiNuevos: qué tipo de
+carros, que reciben tu carro, financiamiento. La Vilet: Puertas del Sol, el
+concepto (todo sin salir de casa), sin sonar clasista. El resto de los 150
+caracteres: una prueba o una oferta concreta.
 
-**3. The pinned three.** Three slots, three different jobs: the best proof, the
-clearest explanation of the offer, the best introduction to the person. This is
-the highest-leverage fix on the whole profile and it takes four taps. An
-unpinned grid shows whatever was posted last, which is a coin flip.
+**3. Los tres fijados.** Tres trabajos distintos: la mejor prueba (entrega
+real, cliente real con permiso, avance de obra real), la explicación más
+clara de cómo se compra, y la mejor presentación del equipo o del proyecto.
+Es el arreglo de más impacto y toma cuatro toques.
 
-**4. Highlights.** Four to six, named for the questions a buyer asks: Pricing,
-Results, How it works, About. Not "Random". Delete the rest.
+**4. Destacadas.** Cuatro a seis, con nombre de pregunta de comprador.
+KsiNuevos: Stock, Financiamiento, Entregas, Cómo comprar, Ubicación. La
+Vilet: Amenidades, Avance, Plantas, Ubicación, Contacto. Borra el resto.
 
-**5. The link.** One destination that matches what the bio just promised. Five
-are allowed; two is already a menu and a menu converts worse than a door.
+**5. El link.** Un destino que cumple lo que promete la bio: WhatsApp con
+mensaje prellenado, catálogo, página del proyecto. Dos ya es un menú.
 
-**6. Grid covers.** The first nine at thumbnail size. Reel covers get chosen,
-not left as whatever frame one was. Four words of text on a cover makes a grid
-readable in one glance.
+**6. Portadas del grid.** Las primeras nueve en miniatura. Portadas de reel
+elegidas, no el primer cuadro. Cuatro palabras de texto (modelo y año; nombre
+del espacio) hacen que el grid se lea de un vistazo. Para La Vilet, con la
+tipografía de marca.
 
-## Output
+## Salida
 
-Score table, then the rewrites as copy-ready blocks in fix-first order, each
-run through `/ig-human`. Re-score at the end and show the delta honestly. If
-the rewrite reaches 84 and not 98, say 84, and say what the rest needs, which
-is usually a grid, a story habit and a pinned post that does not exist yet.
-None of that is a rewrite.
+La tabla de puntaje, luego las reescrituras como bloques listos para copiar
+en orden de prioridad, cada una pasada por `/ig-human`. Vuelve a calificar al
+final y muestra la diferencia con honestidad. Si llega a 84 y no a 98, di 84,
+y di qué falta (casi siempre: un grid, el hábito de historias, y un post
+fijado que todavía no existe). Nada de eso es reescribir.
 
-Nothing is saved to Instagram by this skill. The user edits each field.
+Esta skill no guarda nada en Instagram. La persona edita cada campo.

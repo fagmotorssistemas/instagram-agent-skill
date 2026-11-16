@@ -1,0 +1,23 @@
+{
+  "nombre": "KsiNuevos",
+  "handle": "@ksinuevos",
+  "nota": "Paleta provisional: reemplaza los colores y el handle por los oficiales de la marca. 'logo' acepta la ruta a un PNG con fondo transparente (relativa a este archivo o absoluta).",
+  "estilo": "energico",
+  "logo": null,
+  "colores": {
+    "fondo": "#101216",
+    "fondo_alt": "#1B1E24",
+    "texto": "#FFFFFF",
+    "texto_suave": "#B9BEC7",
+    "acento": "#FFC21A",
+    "texto_sobre_acento": "#101216"
+  },
+  "fuentes": {
+    "titulo": {"familia": "Archivo", "archivo": "../fuentes/Archivo-Variable.ttf", "peso": 800, "ancho": 125, "mayusculas": true, "espaciado": "-0.01em"},
+    "texto": {"familia": "Archivo", "archivo": "../fuentes/Archivo-Variable.ttf", "peso": 450, "ancho": 100, "mayusculas": false, "espaciado": "0"},
+    "etiqueta": {"familia": "Archivo", "archivo": "../fuentes/Archivo-Variable.ttf", "peso": 700, "ancho": 125, "mayusculas": true, "espaciado": "0.08em"},
+    "cifras": {"familia": "Archivo", "archivo": "../fuentes/Archivo-Variable.ttf", "peso": 800, "ancho": 125, "mayusculas": false, "espaciado": "-0.02em"}
+  },
+  "cta_por_defecto": "Comenta el modelo y te mando toda la info",
+  "cierre": "KsiNuevos, tu pana de confianza"
+}

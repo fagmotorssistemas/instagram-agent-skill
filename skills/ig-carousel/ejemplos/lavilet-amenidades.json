@@ -1,0 +1,14 @@
+{
+  "marca": "lavilet",
+  "alt": "Portada: las amenidades de La Vilet, en Puertas del Sol, Cuenca: piscina, spa, gimnasio y áreas sociales en el mismo edificio.",
+  "slides": [
+    {"tipo": "portada", "etiqueta": "Puertas del Sol · Cuenca", "titulo": "Todo, sin salir de casa", "subtitulo": "Las amenidades de La Vilet, una por una."},
+    {"tipo": "gancho", "texto": "La mejor ubicación de Cuenca ya no es suficiente. Lo que importa es lo que tienes a dos pisos de tu puerta."},
+    {"tipo": "idea", "numero": "01", "titulo": "Piscina con vista", "texto": "Curva, con camastros y la ciudad de fondo. Para un domingo sin manejar a ningún lado."},
+    {"tipo": "idea", "numero": "02", "titulo": "Spa, sauna y turco", "texto": "El final del día, en el mismo edificio donde termina."},
+    {"tipo": "idea", "numero": "03", "titulo": "Gimnasio equipado", "texto": "Sin membresía aparte, sin tráfico de por medio."},
+    {"tipo": "idea", "numero": "04", "titulo": "Área social y BBQ", "texto": "Para recibir a la familia sin que tu sala sea el único lugar."},
+    {"tipo": "resumen", "titulo": "En un solo edificio", "puntos": ["Piscina y jacuzzi", "Spa, sauna y turco", "Gimnasio", "Área social y BBQ"]},
+    {"tipo": "cta", "titulo": "Conoce el departamento modelo", "texto": "Escríbenos y agenda tu visita.", "boton": "Agenda tu visita"}
+  ]
+}

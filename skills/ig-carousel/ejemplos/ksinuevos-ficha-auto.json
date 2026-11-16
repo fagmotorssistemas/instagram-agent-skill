@@ -1,0 +1,14 @@
+{
+  "marca": "ksinuevos",
+  "alt": "Ficha de una Toyota Fortuner 2019 en venta en KsiNuevos, Cuenca.",
+  "slides": [
+    {"tipo": "portada", "etiqueta": "Acaba de llegar", "titulo": "Fortuner 2019, un solo dueño", "subtitulo": "Desliza: todo lo que tienes que saber.", "imagen": "fotos/fortuner-1.jpg"},
+    {"tipo": "ficha", "titulo": "Toyota Fortuner 2019", "imagen": "fotos/fortuner-2.jpg",
+     "datos": [["Kilometraje", "{{km}}"], ["Motor", "2.7 gasolina"], ["Caja", "Automática"], ["Tracción", "4x2"], ["Dueños", "1"], ["Mantenimientos", "Concesionario"]],
+     "precio": "{{precio}}"},
+    {"tipo": "imagen", "imagen": "fotos/fortuner-3.jpg", "titulo": "7 asientos de verdad", "texto": "La tercera fila se usa, no es de adorno."},
+    {"tipo": "idea", "titulo": "Para quién es", "texto": "Familias que salen a la Costa los fines de semana y necesitan subir sin sufrir."},
+    {"tipo": "idea", "titulo": "Recibimos tu carro", "texto": "Lo avaluamos y va como parte de pago. La diferencia, con financiamiento."},
+    {"tipo": "cta", "titulo": "Comenta FORTUNER", "texto": "y te mando toda la info.", "boton": "Comenta FORTUNER"}
+  ]
+}

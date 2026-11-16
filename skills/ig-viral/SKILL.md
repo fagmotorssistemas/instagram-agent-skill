@@ -1,178 +1,177 @@
 ---
 name: ig-viral
 description: >-
-  Go and find the reels that are actually working right now in the user's
-  niche, rank them by how far each beat its own account, name the hook formula
-  each one used, and turn that into a swipe file they can shoot from. Use when
-  the user says "find viral videos", "what's working right now", "what are
-  people posting in my niche", "reverse engineer this account", "build me a
-  swipe file", "why is this reel doing numbers", or asks what to make next and
-  has no evidence to answer with.
+  Busca los reels que de verdad están funcionando ahora en el nicho de
+  KsiNuevos (autos usados) o de La Vilet (inmobiliaria premium), los ordena
+  por cuánto superaron a su propia cuenta, nombra la fórmula de gancho de cada
+  uno y arma un archivo swipe para grabar. Úsala cuando pidan "busca videos
+  virales", "qué está funcionando", "qué publica la competencia", "analiza
+  esta cuenta", "arma un swipe file", "por qué este reel pegó", o pregunten
+  qué hacer después sin tener evidencia.
 ---
 
 # ig-viral
 
-The research skill. Everything else in this pack writes; this one goes and
-looks. Run it monthly, not daily. Formulas last a season.
+La skill de investigación. Todo lo demás en este paquete escribe; esta va y
+mira. Córrela una vez al mes, no todos los días. Las fórmulas duran una
+temporada.
 
-One tool lives in this folder and it runs:
+Una herramienta vive en esta carpeta y funciona:
 
 ```bash
-python3 swipe.py captured.tsv --out ~/.claude/instagram/swipe.md
+python3 swipe.py capturados.tsv --out ~/.claude/instagram/<marca>/swipe.md
 ```
 
-## The one idea that makes this worth doing
+Encaja directo con la automatización de formatos de reels: esto es lo que
+dice cuál formato probar después, con evidencia y no con intuición.
 
-**Raw views are not evidence.** An account with two million followers doing
-400,000 views had a quiet Tuesday. An account with four thousand followers
-doing 400,000 views found something, and that something is copyable.
+## La idea que hace que valga la pena
 
-So everything here ranks on the **outlier multiple**: views divided by that
-account's own recent median. Anything above 3x is a signal. Anything below 1.5x
-is that account's normal day and it teaches you nothing, no matter how big the
-number looks.
+**Las vistas crudas no son evidencia.** Una cuenta de dos millones de
+seguidores con 400.000 vistas tuvo un martes tranquilo. Una de cuatro mil con
+400.000 vistas encontró algo, y eso se puede copiar.
 
-Collect accounts **within about 10x of the user's own size**. A formula that
-works at 2M followers often works because it is at 2M followers.
+Todo aquí se ordena por el **múltiplo**: vistas divididas para la mediana
+reciente de esa misma cuenta. Más de 3x es una señal. Menos de 1,5x es un día
+normal de esa cuenta y no enseña nada, por grande que se vea el número.
 
-## Step 1: pick the accounts
+Junta cuentas **de hasta unas 10 veces el tamaño de la marca**. Una fórmula
+que funciona con 2M de seguidores muchas veces funciona porque tiene 2M.
 
-Ask the user for 6 to 12 accounts, or propose them and get approval:
+## Paso 1: elegir las cuentas
 
-- **4 direct** - same niche, same offer, slightly ahead.
-- **4 adjacent** - different niche, same audience. This is where formats get
-  borrowed from before anybody in the niche has them.
-- **2 to 4 outsized** - much bigger accounts, for format only, never for
-  cadence or tone.
+Pide 6 a 12 cuentas, o propónlas y pide aprobación:
 
-Also ask them to open their own **Saved collection**. It is the fastest and
-most relevant corpus that exists and it is already filtered by their taste.
+- **4 directas** - mismo nicho, un poco más adelante. KsiNuevos: patios y
+  concesionarios de usados de Ecuador y Latinoamérica. La Vilet: proyectos
+  inmobiliarios premium de Ecuador, Colombia, México.
+- **4 adyacentes** - otro nicho, misma audiencia. KsiNuevos: creadores de
+  reseñas de autos, mecánicos que explican. La Vilet: arquitectura, diseño
+  interior, hoteles boutique. De aquí salen formatos antes de que los tenga la
+  competencia.
+- **2 a 4 grandes** - cuentas mucho más grandes, solo para formato, nunca
+  para ritmo ni tono.
 
-## Step 2: go and look
+Pide también que abran su colección de **Guardados**. Es el corpus más rápido
+y relevante que existe, y ya está filtrado por su gusto.
 
-Use whatever browsing tool this session actually has: an in-app browser, a
-browser extension connected to the user's own Chrome, or a computer-use tool.
-There is no API for this and there does not need to be, because the volume is
-small enough to read.
+## Paso 2: ir a mirar
 
-**Rules that are not negotiable:**
+Usa la herramienta de navegación que tenga la sesión: el navegador de la app,
+la extensión en el Chrome del usuario, o uso del computador. No hay API para
+esto y no hace falta: el volumen es lo bastante chico para leerlo.
 
-- **Never log into Instagram on the user's behalf and never ask for a
-  password.** If a page needs a login, the user is the one who is already
-  logged in. Drive their browser with them present, or ask them to paste.
-- **This is reading, not scraping.** Ten accounts, a dozen reels each, at human
-  speed. Automated collection at volume violates Instagram's Terms of Use and
-  gets accounts action-blocked. Do not build a crawler, do not use a scraping
-  service, and do not loop this in the background.
-- **Copy the formula, never the video.** The hook shape, the structure, the
-  length, the pattern of cuts. Not their script, not their voice, not their
-  edit. Attribute every row in the swipe file to the account it came from.
+**Reglas que no se negocian:**
 
-**What to capture per reel**, in the creator's own words:
+- **Nunca inicies sesión en Instagram por el usuario y nunca pidas una
+  contraseña.** Si una página pide login, quien ya está logueado es el
+  usuario. Maneja su navegador con él presente, o pídele que pegue.
+- **Esto es leer, no hacer scraping.** Diez cuentas, una docena de reels
+  cada una, a velocidad humana. La recolección automática a volumen viola los
+  Términos de Instagram y bloquea cuentas. No construyas un crawler, no uses
+  un servicio de scraping, no lo dejes corriendo de fondo.
+- **Copia la fórmula, nunca el video.** La forma del gancho, la estructura,
+  la duración, el ritmo de cortes. No el guion, no la voz, no la edición.
+  Atribuye cada fila del swipe a la cuenta de donde salió.
 
-| field | notes |
+**Qué capturar por reel**, con las palabras del creador:
+
+| campo | notas |
 | --- | --- |
-| account | handle |
-| followers | from the profile |
-| median | eyeball the last 12 reels and take the middle view count |
-| views | this reel |
-| hook | the first line, spoken or on screen, verbatim including bad grammar |
-| on-screen | the first text card, if different |
-| length | seconds |
-| cta | what they asked for at the end |
+| cuenta | el @ |
+| seguidores | del perfil |
+| mediana | mira los últimos 12 reels y toma las vistas del del medio |
+| vistas | de este reel |
+| gancho | la primera línea, hablada o en pantalla, tal cual, con errores incluidos |
+| pantalla | la primera tarjeta de texto, si es distinta |
+| duración | segundos |
+| cta | qué pidieron al final |
+| formato | vendedor a cámara, voz en off, letras 3D, editorial, recorrido, etc. |
 
-Median is the important one. Without it you are back to ranking by follower
-count, which is the thing this skill exists to stop.
+La mediana es la importante. Sin ella vuelves a ordenar por seguidores, que es
+justo lo que esta skill existe para evitar.
 
-**When Instagram will not show you enough:** the same hook grammar runs on
-YouTube Shorts, where view counts and transcripts are public and no login is
-involved. It is a legitimate second corpus, and the spoken hook is easier to
-get:
+**Cuando Instagram no muestra suficiente:** la misma gramática de ganchos
+corre en YouTube Shorts, donde las vistas y transcripciones son públicas y no
+hace falta login:
 
 ```bash
-# view counts for a channel's shorts
+# vistas de los shorts de un canal
 python3 -m yt_dlp --flat-playlist --playlist-end 40 -J \
-  "https://www.youtube.com/@HANDLE/shorts" > channel.json
+  "https://www.youtube.com/@CANAL/shorts" > canal.json
 
-# the spoken first line of one short, from its auto-captions
-python3 -m yt_dlp --skip-download --write-auto-subs --sub-langs "en.*" \
-  --sub-format json3 -o hook "https://www.youtube.com/watch?v=VIDEO_ID"
+# la primera línea hablada de un short, desde sus subtítulos automáticos
+python3 -m yt_dlp --skip-download --write-auto-subs --sub-langs "es.*" \
+  --sub-format json3 -o gancho "https://www.youtube.com/watch?v=VIDEO_ID"
 ```
 
-Take every caption word with a timestamp under 3.0 seconds. That is the hook,
-as said, not as written.
+Toma cada palabra con marca de tiempo menor a 3,0 segundos. Ese es el gancho,
+como se dijo.
 
-## Step 3: rank it
+## Paso 3: ordenar
 
-Fill a tab-separated file with a header row and run the script:
+Llena un archivo separado por tabulaciones (encabezados en español o en
+inglés) y corre el script:
 
 ```
-account	followers	median	views	hook
-@someone	48000	11000	412000	nobody tells you your first 30 reels are supposed to flop
+cuenta	seguidores	mediana	vistas	gancho
+@patio_x	48000	11000	412000	nadie te dice que el precio es lo de menos
 ```
 
 ```bash
-python3 swipe.py captured.tsv --out ~/.claude/instagram/swipe.md
+python3 swipe.py capturados.tsv --out ~/.claude/instagram/<marca>/swipe.md
 ```
 
-It computes the outlier multiple, names the hook formula using the same 26
-formulas `/ig-reel` writes from, scores each hook with `hookscore.py`, and
-prints what separates the top third from the bottom third.
+Calcula el múltiplo, nombra la fórmula con las mismas 26 de `/ig-reel`,
+califica cada gancho con `hookscore.py`, e imprime qué separa al tercio de
+arriba del de abajo.
 
-## Step 4: say what it means, carefully
+## Paso 4: decir qué significa, con cuidado
 
-Report three things and no more:
+Reporta tres cosas y nada más:
 
-1. **Which formulas over-index** in the top third, with counts. Two formulas
-   appearing four times each across six accounts is a finding. One appearing
-   twice is not.
-2. **What the top third have in common structurally** that the bottom third do
-   not: hook length, whether the payoff is visual, whether the first frame
-   moves, where the ask is.
-3. **The unclassified rows.** Every hook the classifier could not name is
-   either noise or a formula that is not in `hooks.json` yet. Read them by
-   hand. This is the most valuable column in the output and it is the reason
-   the script prints the count.
+1. **Qué fórmulas sobresalen** en el tercio de arriba, con conteos.
+2. **Qué tiene en común el tercio de arriba** que no tiene el de abajo: largo
+   del gancho, si el pago es visual, si el primer cuadro se mueve, dónde está
+   el pedido, qué formato de edición.
+3. **Las filas sin clasificar.** Cada gancho que el clasificador no pudo
+   nombrar es ruido o una fórmula que todavía no está en `hooks.json`. Léelos
+   a mano. Es la columna más valiosa.
 
-Then state the sample size and the confidence in plain words. Forty reels
-across six accounts supports a claim. Twelve does not, and saying so is the
-difference between research and horoscopes.
+Luego di el tamaño de la muestra y la confianza en palabras simples. Cuarenta
+reels en seis cuentas sostienen una afirmación. Doce no.
 
-## Step 5: turn it into something to shoot
+## Paso 5: convertirlo en algo para grabar
 
-For the top three formulas, write **the user's version**: their own story,
-their own number, in the shape that is working. Hand each one to `/ig-reel`
-with the formula id already chosen.
+Para las tres fórmulas de arriba, escribe **la versión de la marca**: su
+carro, su dato, su unidad, en la forma que está funcionando. Pasa cada una a
+`/ig-reel` con la fórmula ya elegida. Nunca entregues "haz un reel como este".
+Entrega una línea de gancho que se pueda decir mañana.
 
-Never hand back "make a reel like this one". Hand back a hook line they could
-say tomorrow.
-
-## Output
+## Salida
 
 ```
-SWIPE  ·  38 reels  ·  7 accounts  ·  baseline: account median
+SWIPE  ·  38 reels  ·  7 cuentas  ·  línea base: mediana de la cuenta
 
-OUTLIERS (above 3x)
-  38.4x  hook 86  #3  Nobody Tells You   @acct_a    412,000  (median 10,700)
-  11.2x  hook 79  #9  The Steal          @acct_c    180,000  (median 16,100)
+SOBRE 3x
+  38.4x  gancho 86  #3  Nadie Te Dice   @cuenta_a   412.000  (mediana 10.700)
+  11.2x  gancho 79  #17 Cara a Cara     @cuenta_c   180.000  (mediana 16.100)
   ...
 
-WHAT IS OVER-INDEXING
-  #3 Nobody Tells You   x5 in the top third, 0 in the bottom
-  #2 Negative Command   x4
-  median hook length    8 words up top, 19 at the bottom
+QUÉ SOBRESALE
+  #3 Nadie Te Dice    x5 arriba, 0 abajo
+  #17 Cara a Cara     x4
+  largo del gancho    8 palabras arriba, 19 abajo
 
-UNCLASSIFIED (6)
-  Two of these are the same shape and it is not in hooks.json: a hook that
-  opens on someone else's comment read out loud. Worth adding.
+SIN CLASIFICAR (6)
+  Dos tienen la misma forma y no está en hooks.json: el vendedor lee en voz
+  alta el comentario de un cliente. Vale la pena agregarla.
 
-YOUR VERSION
-  #3  "Nobody tells you the first 20 proposals are supposed to lose."
-  ...
+TU VERSIÓN
+  #3  "Nadie te dice que una SUV usada se revisa primero por los pernos."
 ```
 
-Write the swipe file to `~/.claude/instagram/swipe.md`. `/ig-reel` and
-`/ig-plan` both read it, which is the point: after this runs once, the rest of
-the pack is working from the user's own evidence instead of from defaults.
+Guarda el swipe en `~/.claude/instagram/<marca>/swipe.md`. `/ig-reel` y
+`/ig-plan` lo leen.
 
-Nothing is posted, followed, liked or messaged by this skill. It reads.
+Esta skill no publica, no sigue, no da like ni manda mensajes. Lee.
